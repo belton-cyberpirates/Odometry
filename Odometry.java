@@ -7,8 +7,14 @@ public class Odometry {
     double heading = 0;
 
     final double trackWidth = 1;
+    final double forwardOffset = 1;
 
     void updatePosition(double deltaLeft, double deltaRight, double deltaBack) {
-        heading += (deltaLeft - deltaRight) / trackWidth;
+        deltaHeading = (deltaLeft - deltaRight) / trackWidth;
+
+        double centerDisplacement = (deltaLeft + deltaRight) / 2
+        double horizontalDisplacement = deltaBack - (forwardOffset * deltaHeading)
+
+        
     }
 }
